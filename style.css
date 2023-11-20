@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+#thankYou {
+    color: green;
+    display: none;
+}
+
+#counter {
+    margin-top: 20px;
+}
+
+#progressBar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border: 1px solid #bbb;
+}
+
+#progressBar div {
+    height: 20px;
+    background-color: #b3d4fc;
+}
