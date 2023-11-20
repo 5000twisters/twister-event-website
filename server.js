@@ -36,4 +36,4 @@ const startServer = async () => {
 };
 
 // Call startServer to start the Express server
-startServer();
+startServer().catch(console.error);
