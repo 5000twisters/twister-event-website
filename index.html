@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Twister Event Registration</h1>
+  <form id="registrationForm" onsubmit="submitForm(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br><br>
+    
+    <label for="contact">Contact Preference:</label>
+    <select id="contact" onchange="showContactField()">
+      <option value="email">Email</option>
+      <option value="phone">Phone</option>
+    </select><br><br>
+    
+    <div id="contactField" style="display:none;">
+      <label for="info">Enter Email or Phone:</label>
+      <input type="text" id="info"><br><br>
+    </div>
+    
+    <label for="commitment">Are you in?</label>
+    <select id="commitment">
+      <option value="in">I'm in!</option>
+      <option value="try">I'll try</option>
+      <option value="maybe">Maybe...</option>
+      <option value="spread">Nah, but I'll spread the word</option>
+      <option value="nothing">I want nothing to do with this</option>
+    </select><br><br>
+    
+    <label for="updates">Update Preferences:</label>
+    <input type="checkbox" name="updates" value="goal">Tell me when you reach your goal<br>
+    <input type="checkbox" name="updates" value="progress">Send me occasional progress updates<br>
+    <input type="checkbox" name="updates" value="never">Never contact me<br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+  
+  <div id="successMessage" style="display:none;">
+    <p>Thank you for registering!</p>
+  </div>
+  
+  <div>
+    <h2>All In Counter:</h2>
+    <p id="counter">0 out of 5000</p>
+    <div id="progressBar"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
